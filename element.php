@@ -26,8 +26,7 @@ if (isset($_GET['id'])) {
 <body>
 
     <h1><?php echo $film['nom']; ?></h1>
-    <div id="f">
-        <img src="" alt="" id="image">
+
 
     </div>
 

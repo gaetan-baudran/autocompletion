@@ -16,6 +16,8 @@
             <input type="text" id="search-bar" name="search" placeholder="Rechercher...">
             <button type="submit">Rechercher</button>
             <div id="result"></div>
+            <hr class="my-4">
+            <div id="result2"></div>
         </form>
     </div>
 </body>
