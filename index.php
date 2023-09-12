@@ -4,14 +4,14 @@
 <head>
     <title>Page d'accueil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
 <body>
     <div class="search-container">
-        <h1>Recherche</h1>
+        <h1>Trouvez Votre Film</h1>
         <form action="recherche.php" method="GET">
             <input type="text" id="search-bar" name="search" placeholder="Rechercher...">
             <button type="submit">Rechercher</button>

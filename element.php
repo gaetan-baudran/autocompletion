@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('./include/config.php');
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $query = $bdd->prepare('SELECT * FROM films WHERE id = :id');
@@ -20,15 +20,18 @@ if (isset($_GET['id'])) {
 <html>
 
 <head>
-    <title>films</title>
+    <title>film <?php echo $film['nom']; ?></title>
+    <link rel="stylesheet" href="./style/element .css">
 </head>
 
 <body>
 
-    <h1><?php echo $film['nom']; ?></h1>
+    <a href="index.php">Accueil</a>
 
-
+    <div class="container">
+       <img src="asset/<?php echo $film['nom']; ?>.jpg" alt="<?php echo $film['nom']; ?>">
     </div>
+
 
 </body>
 <script src="./script.js"></script>

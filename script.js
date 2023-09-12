@@ -6,24 +6,32 @@ if (search) {
   search.addEventListener("keyup", () => {
     result.innerHTML = "";
     if (search.value != "") {
-      //   console.log("recherche.php/?search=" + search.value);
       fetch("recherche.php/?search=" + search.value)
-        .then((response) => {
-          return response.json();
-        })
+        .then((response) => response.json())
         .then((data) => {
           data.forEach((element) => {
             let e = document.createElement("p");
             
-            e.innerHTML =
-              '<a href= "element.php?id=' + element.id + '">' + element.nom;
-             
+  
+            // Ajoutez un lien vers element.php
+            let link = document.createElement("a");
+            link.href = "element.php?id=" + element.id;
+            link.textContent = element.nom;
+  
+            e.appendChild(link); // Ajoutez le lien à l'élément <p>
+  
             result.appendChild(e);
           });
+        })
+        .catch((error) => {
+          console.error("Une erreur s'est produite lors de la récupération des données : ", error);
         });
     }
   });
 }
+
+
+
 
 if (search) {
   search.addEventListener("keyup", () => {

@@ -5,7 +5,7 @@ $username = 'root';
 $password = '';
 
 try {
-    $bdd = new PDO("mysql:host=$servername;dbname=autocompletion", $username, $password);
+    $bdd = new PDO("mysql:host=$servername;dbname=autocompletion;charset=utf8", $username, $password);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo 'Connexion réussie';
 } catch (PDOException $e) {

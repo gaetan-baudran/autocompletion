@@ -1,22 +1,16 @@
 <?php
-include('config.php');
+include('./include/config.php');
 
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
     $query = $bdd->prepare('SELECT * FROM films WHERE nom LIKE :search ');
-    $query->execute(array('search' =>   $search . '%'));
+    $query->execute(array('search' => '%' . $search . '%'));
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
-    $json = json_encode($result);
+    $uniqueResult = array_unique($result, SORT_REGULAR); 
+    $json = json_encode($uniqueResult);
     echo $json;
 }
-if (isset($_GET['search2'])) {
-    $search2 = $_GET['search2'];
-    $query = $bdd->prepare('SELECT * FROM films WHERE nom LIKE :search2 ');
-    $query->execute(array('search2' => '%' . $search2 . '%'));
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
-    $json = json_encode($result);
-    echo $json;
-}
+
 
 if (isset($_GET['id'])) {
     $req = $bdd->prepare("SELECT * FROM `films` WHERE `id` = ? ");
@@ -25,3 +19,4 @@ if (isset($_GET['id'])) {
     $json = json_encode($result);
     echo $json;
 }
+?>
