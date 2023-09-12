@@ -44,7 +44,7 @@ INSERT INTO `films` (`id`, `nom`) VALUES
 (5, 'Terminator'),
 (6, 'Predator'),
 (7, 'Alien'),
-(8, 'L\'Arme Fatale'),
+(8, 'L''Arme Fatale'),
 (9, 'James Bond - Skyfall'),
 (10, 'Hot Fuzz'),
 (11, 'Speed'),
