@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 11 avr. 2023 à 14:30
--- Version du serveur : 10.4.27-MariaDB
--- Version de PHP : 8.2.0
+-- Généré le : mar. 12 sep. 2023 à 23:14
+-- Version du serveur : 10.4.28-MariaDB
+-- Version de PHP : 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,14 +37,14 @@ CREATE TABLE `films` (
 --
 
 INSERT INTO `films` (`id`, `nom`) VALUES
-(1, 'Piege de cristal'),
+(1, 'Piège de cristal'),
 (2, 'Le Seigneur Des Anneaux'),
 (3, 'Matrix'),
 (4, 'Kill Bill'),
 (5, 'Terminator'),
 (6, 'Predator'),
 (7, 'Alien'),
-(8, 'L\ Arme Fatale'),
+(8, 'L\'Arme Fatale'),
 (9, 'James Bond - Skyfall'),
 (10, 'Hot Fuzz'),
 (11, 'Speed'),
@@ -52,7 +52,7 @@ INSERT INTO `films` (`id`, `nom`) VALUES
 (13, 'Avatar'),
 (14, 'Halloween'),
 (15, 'Evil Dead'),
-(16, 'Marvel Avenger'),
+(16, 'Marvel Avengers'),
 (17, 'RoboCop'),
 (18, 'Rambo'),
 (19, 'Rocky'),

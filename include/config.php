@@ -1,11 +1,11 @@
 <?php
 session_start();
-$servername = 'localhost';
-$username = 'root';
-$password = '';
+$servername = 'localhost:3306';
+$username = 'gaetan_auto';
+$password = 'ash83400974';
 
 try {
-    $bdd = new PDO("mysql:host=$servername;dbname=autocompletion;charset=utf8", $username, $password);
+    $bdd = new PDO("mysql:host=$servername;dbname=gaetan-baudran_autocompletion;charset=utf8", $username, $password);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo 'Connexion réussie';
 } catch (PDOException $e) {
