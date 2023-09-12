@@ -14,10 +14,9 @@
         <h1>Trouvez Votre Film</h1>
         <form action="recherche.php" method="GET">
             <input type="text" id="search-bar" name="search" placeholder="Rechercher...">
-            <button type="submit">Rechercher</button>
             <div id="result"></div>
             <hr class="my-4">
-            <div id="result2"></div>
+            <!-- <div id="result2"></div> -->
         </form>
     </div>
 </body>
